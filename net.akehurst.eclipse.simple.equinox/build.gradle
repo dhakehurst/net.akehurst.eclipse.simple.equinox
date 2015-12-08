@@ -1,0 +1,30 @@
+plugins {
+	id 'java'
+	id 'maven'
+}
+
+repositories {
+	maven {
+		url 'https://dl.bintray.com/dhakehurst/maven'
+	}
+	//flatDir { dir 'lib' }
+}
+
+group 'net.akehurst.eclipse'
+version '1.0.0'
+
+dependencies {
+	compile 'net.akehurst.org.eclipse.mars:org.eclipse.osgi:+'
+
+	compile 'net.akehurst.org.eclipse.mars:org.eclipse.equinox.common:+'
+	compile 'net.akehurst.org.eclipse.mars:org.eclipse.equinox.registry:+'
+	compile 'net.akehurst.org.eclipse.mars:org.eclipse.equinox.preferences:+'
+	compile 'net.akehurst.org.eclipse.mars:org.eclipse.equinox.security:+'
+
+	compile 'net.akehurst.org.eclipse.mars:org.eclipse.equinox.p2.core:+'
+	compile 'net.akehurst.org.eclipse.mars:org.eclipse.equinox.p2.repository:+'
+	compile 'net.akehurst.org.eclipse.mars:org.eclipse.equinox.p2.metadata:+'
+	compile 'net.akehurst.org.eclipse.mars:org.eclipse.equinox.p2.artifact.repository:+'
+	compile 'net.akehurst.org.eclipse.mars:org.eclipse.equinox.p2.transport.ecf:+'
+
+}
