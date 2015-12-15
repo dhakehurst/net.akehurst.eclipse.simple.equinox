@@ -28,3 +28,12 @@ dependencies {
 	compile 'net.akehurst.org.eclipse.mars:org.eclipse.equinox.p2.transport.ecf:+'
 
 }
+
+task sourcesJar(type:Jar){
+	from sourceSets.main.allSource
+	classifier = 'source'
+}
+
+artifacts {
+	archives sourcesJar
+}
